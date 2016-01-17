@@ -1,7 +1,8 @@
 #! /bin/bash
 
-TITLE=$1
-CATEGORIES=$2
+Title=$1
+Categories=$2
 
-PostName=$(./bin/newpost.py -t "$TITLE" -c "$CATEGORIES" -cm -di 1234 -p)
+DisqusIdentifier=$(./bin/data.py -di -f static.json)
+PostName=$(./bin/newpost.py -t "$Title" -c "$Categories" -cm -di "$DisqusIdentifier" -p)
 vi $PostName
