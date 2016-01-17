@@ -1,0 +1,7 @@
+#! /bin/bash
+
+TITLE=$1
+CATEGORIES=$2
+
+PostName=$(./bin/newpost.py -t "$TITLE" -c "$CATEGORIES" -cm -di 1234 -p)
+vi $PostName
