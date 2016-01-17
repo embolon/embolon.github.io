@@ -3,6 +3,7 @@ layout: post
 title:  "Blog Setup"
 date:   2016-01-16 11:04:38 -0600
 categories: initiation
+comments: true
 ---
 
 ### Step 0 Have a Github account
