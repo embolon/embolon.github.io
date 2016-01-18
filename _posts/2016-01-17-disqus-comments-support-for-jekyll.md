@@ -17,6 +17,7 @@ Disqus is a pretty popular discussion and comment system online. It is pretty si
 
 We will modify _layouts/post.html to include a "comment" session and create a _includes/disqus.html that holds the actual "comment" session Universal Code.
 
+
     _layouts/post.html
     <article>
       ...
@@ -26,6 +27,7 @@ We will modify _layouts/post.html to include a "comment" session and create a _i
         { % include disqus.html % } # NOTE, no space between { and %, % and }
       </div>  
     </article>
+
 
     _includes/disqus.html
     { % if page.comments % }
@@ -56,7 +58,9 @@ We will modify _layouts/post.html to include a "comment" session and create a _i
     </div>
     { % endif % }
 
-The liquid template will read page front matter to parse into variables like page.url, page.layouts, page.comments. A typical way to use the liquid template is like this: { % if page.comments % } { % endif % }. This works like the C macro #ifdef and #endif. To enable such page.comments switch, we will further include the "comments" into the post front matter. For example,
+
+The liquid template will read page front matter to parse into variables like page.url, page.layouts, page.comments. A typical way to use the liquid template is like this: { % if page.comments % } { % endif % }. This works like the C macro #ifdef and #endif. To enable such page.comments switch, we will further include the "comments" into the post front matter.
+
 
     _posts/2016-01-17-This-is-a-test-post.md
     ---
@@ -69,6 +73,7 @@ The liquid template will read page front matter to parse into variables like pag
     ---
 
     ## Testing
+
 
 ## Optional Disqus Identifier
     

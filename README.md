@@ -11,10 +11,10 @@ This is Embolon's Blog site -- Embolon Who.
 
 
 ```
-    Usage:
-    ./bin/post TITLE CATEGORIES 
-    Example
-    ./bin/post "This is a new post" "new post"
+Usage:
+./bin/post TITLE CATEGORIES 
+Example
+./bin/post "This is a new post" "new post"
 ```
 
 ---
