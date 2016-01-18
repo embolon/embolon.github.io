@@ -4,7 +4,7 @@ title:  "Disqus comments support for jekyll"
 date:   2016-01-17 18:16:57 -0600
 categories: initiation
 comments: true
-disqus_identifier: 000000000001
+disqus_identifier: 000000000002
 ---
 
 It is really nice to have some comment support for this blog, so I have googled around and added this Disqus support. Here, I documented the steps to make this happen.
