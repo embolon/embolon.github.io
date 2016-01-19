@@ -2,7 +2,12 @@
 layout: post
 title:  "Disqus comments support for jekyll"
 date:   2016-01-17 18:16:57 -0600
-categories: initiation
+tags:
+- disqus
+- comments
+- jekyll
+- github
+categories: blog setup
 comments: true
 disqus_identifier: 000000000002
 ---

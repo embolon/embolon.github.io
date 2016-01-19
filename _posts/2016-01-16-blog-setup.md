@@ -2,7 +2,10 @@
 layout: post
 title:  "Blog Setup"
 date:   2016-01-16 11:04:38 -0600
-categories: initiation
+tags: 
+- jekyll
+- github
+categories: blog setup
 comments: true
 disqus_identifier: 000000000001
 ---
