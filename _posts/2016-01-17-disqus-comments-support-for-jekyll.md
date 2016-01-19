@@ -7,7 +7,7 @@ comments: true
 disqus_identifier: 000000000002
 ---
 
-It is really nice to have some comment support for this blog, so I have googled around and added this Disqus support. Here, I documented the steps to make this happen.
+It is really nice to have some comment support for this blog, so I have googled around and added this Disqus support. Here, I documented the steps.
 
 ## Step 0 Register the blog site on Disqus
 
@@ -78,3 +78,7 @@ The liquid template will read page front matter to parse into variables like pag
 ## Optional Disqus Identifier
     
 Since a page url can change when we decided to change the title of the post, a Disqus Identifier is better not set to the page url. People suggested different solutions to this situation including generating random numbers to assign to the new post or maintain a counter of the number of the posts. For the former one, as long as there are no random number conflicks, that is, a new generated number does not equal to any previous post, it should be fine. This is an easy soluation but not very reliable. The latter one can avoid possible identifier conflicks but will require the counter to be stored, which will add a little complexity.
+
+---
+
+Thanks to Ankur Gupta's [post](http://www.perfectlyrandom.org/2014/06/29/adding-disqus-to-your-jekyll-powered-github-pages/ "Adding Disqus to your Jekyll") on Perfectly Random. I found it very helpful when I set up the Disqus comments on my blog site.
