@@ -38,7 +38,7 @@ Since space might bring issues in the future, if one the tag contains space, it 
 It would be really nice to show categories and tags parallel to time right under the title of the post. So after trying a bit, I came up with this code to insert after the "time" and "author" session in the header part. This code can show both categories and tags like this: "Jan 19, 2016 \| blog-setup \| github jekyll tags categories", where the category and tags can be clicked to go to their links.
 
     
-    { % if page.categories % } | <a href='/categories/#{ {page.categories} }'>{ {page.categories} }</a> { % endif % }{ % if page.tags % } | { % for tag in page.tags % } <a href='/tag/#{ {tag} }'>{ {tag} }</a> { % endfor % } { % endif % }
+    { % if page.categories % } | <a href='/categories/#{ {page.categories} }'>{ {page.categories} }</a> { % endif % }{ % if page.tags % } | { % for tag in page.tags % } <a href='/tags/#{ {tag} }'>{ {tag} }</a> { % endfor % } { % endif % }
 
 
 Now, the tags and categories will show up on a new post. But we still need a tags and a categories page to show all the posts like a catalog.
