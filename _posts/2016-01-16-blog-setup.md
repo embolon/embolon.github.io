@@ -5,7 +5,7 @@ date:   2016-01-16 11:04:38 -0600
 tags: 
 - jekyll
 - github
-categories: blog setup
+categories: blog-setup
 comments: true
 disqus_identifier: 000000000001
 ---

@@ -7,7 +7,7 @@ tags:
 - comments
 - jekyll
 - github
-categories: blog setup
+categories: blog-setup
 comments: true
 disqus_identifier: 000000000002
 ---
