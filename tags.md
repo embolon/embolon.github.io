@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags
-permalink: /tag/
+permalink: /tags/
 ---
 
 Click on a tag to see relevant list of posts.
