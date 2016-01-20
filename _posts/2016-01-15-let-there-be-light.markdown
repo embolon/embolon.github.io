@@ -2,7 +2,7 @@
 layout: post
 title:  "Let there be light!"
 date:   2016-01-15 15:21:38 -0600
-categories: blog setup
+categories: blog-setup
 ---
 # GENESIS 1:3
 
