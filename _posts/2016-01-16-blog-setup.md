@@ -8,6 +8,7 @@ tags:
 categories: blog-setup
 comments: false
 disqus_identifier: 000000000001
+language: english
 ---
 
 ### Step 0 Have a Github account

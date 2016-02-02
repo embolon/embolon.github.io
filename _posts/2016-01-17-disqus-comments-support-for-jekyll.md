@@ -10,6 +10,7 @@ tags:
 categories: blog-setup
 comments: true
 disqus_identifier: 000000000002
+language: english
 ---
 
 It is really nice to have some comment support for this blog, so I have googled around and added this Disqus support. Here, I documented the steps.

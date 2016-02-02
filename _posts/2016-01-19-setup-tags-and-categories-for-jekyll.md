@@ -10,6 +10,7 @@ tags:
 - categories
 comments: true
 disqus_identifier: 000000000101
+language: english
 ---
 
 Previously we setup the Disqus comment feature to the blog site, this time I am going to add tags and categories pages. Although there is no limitation on how many categories a post can have, I would consider category as a directory that a post belongs to only one category. As for tags, it is perfectly OK for one post to have multiple tags.

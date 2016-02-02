@@ -16,6 +16,8 @@ parser.add_argument('-di', '--disqus-identifier', help='disqus identifier',
                     default='false')
 parser.add_argument('-p', '--print', help='print the newly created post file name', 
                     action='store_true', default=False)
+parser.add_argument('-l', '--language', help='the language of this post: english/chinese',
+                    default='english')
 args = parser.parse_args()
 args_var = vars(args)
 
@@ -35,6 +37,7 @@ if __name__ == '__main__':
     for tag in args_var['tags'].split(','): # use ',' to separate tags
         tags += '\n- {0}'.format('-'.join(tag.lower().split()))
     comments = 'true' if args_var['comments'] else 'false'
+    language = args_var['language']
     post_content = '''---
 layout: post
 title:  "{0}"
@@ -43,8 +46,9 @@ categories: {2}
 tags: {3}
 comments: {4}
 disqus_identifier: {5}
+language: {6}
 ---
-'''.format(title, now, categories, tags, comments, disqus_identifier)
+'''.format(title, now, categories, tags, comments, disqus_identifier, language)
 
     # create new post file
     with open('_posts/{0}.md'.format(post_name), 'w') as fh:

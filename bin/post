@@ -3,7 +3,8 @@
 Title=$1
 Categories=$2
 Tags=$3
+Language=$4
 
 DisqusIdentifier=$(./bin/data.py -di -f static.json)
-PostName=$(./bin/newpost.py -t "$Title" -c "$Categories" -tg "$Tags" -cm -di "$DisqusIdentifier" -p)
+PostName=$(./bin/newpost.py -t "$Title" -c "$Categories" -tg "$Tags" -cm -di "$DisqusIdentifier" -l $Language -p)
 vi $PostName

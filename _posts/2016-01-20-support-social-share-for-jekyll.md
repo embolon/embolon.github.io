@@ -9,6 +9,7 @@ tags:
 - share
 comments: true
 disqus_identifier: 000000000102
+language: english
 ---
 
 One of the most important method to get a post more attention is to share it to the social media. Such a feature is must for my blog site too. Today I will briefly introduce how to add this feature to the jekyll supported github page.
