@@ -8,7 +8,7 @@ tags:
 - github
 - share
 comments: true
-disqus_identifier: 000000000102
+identifier: 000000000102
 language: english
 ---
 

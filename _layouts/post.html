@@ -22,7 +22,8 @@ layout: default
   </div>
 
   <div class="comments">
-    {% include disqus.html %}
+    {% if page.language == 'english' %}{% include disqus.html %}{% endif %}
+    {% if page.language == 'chinese' %}{% include duoshuo.html %}{% endif %}
   </div>
 
 </article>

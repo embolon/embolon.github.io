@@ -5,7 +5,7 @@ import argparse
 import os.path
 
 parser = argparse.ArgumentParser(description='Argument')
-parser.add_argument('-di', '--disqus-identifier', help='return disqus identifier',
+parser.add_argument('-i', '--identifier', help='return page identifier',
                     action='store_true', default=False)
 parser.add_argument('-f', '--file', help='input Json File', default='default.json')
 args = parser.parse_args()
@@ -13,7 +13,7 @@ args_var = vars(args)
 
 def initData():
     newdata = {}
-    newdata['disqus_identifier'] = 0
+    newdata['identifier'] = 0
     return newdata
 
 if __name__ == '__main__':
@@ -27,9 +27,9 @@ if __name__ == '__main__':
             data = json.load(fh)
     
     # output the required data
-    if args_var['disqus_identifier']:
-        print('{0:012d}'.format(data['disqus_identifier']))
-        data['disqus_identifier'] += 1
+    if args_var['identifier']:
+        print('{0:012d}'.format(data['identifier']))
+        data['identifier'] += 1
 
     # write back the data
     with open(filepath, 'w') as fh:

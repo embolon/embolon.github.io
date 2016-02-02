@@ -9,7 +9,7 @@ tags:
 - tags
 - categories
 comments: true
-disqus_identifier: 000000000101
+identifier: 000000000101
 language: english
 ---
 

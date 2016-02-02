@@ -9,7 +9,7 @@ tags:
 - github
 categories: blog-setup
 comments: true
-disqus_identifier: 000000000002
+identifier: 000000000002
 language: english
 ---
 

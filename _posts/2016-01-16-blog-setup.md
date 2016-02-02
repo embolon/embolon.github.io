@@ -7,7 +7,7 @@ tags:
 - github
 categories: blog-setup
 comments: false
-disqus_identifier: 000000000001
+identifier: 000000000001
 language: english
 ---
 
