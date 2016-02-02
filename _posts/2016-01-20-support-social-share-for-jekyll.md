@@ -35,3 +35,7 @@ TBD. Will update soon.
 
 * Find good looking icons.
 * Learn to modify css styles.
+
+## Step 3 Alternative Services
+
+I have later found that services such as AddThis and JiaThis can provide a much easier solution to social network sharings. I used AddThis for my English posts and JiaThis for my Chinese posts. It is very straightforward to implement these two. Go to their websites. Use their GUI tool to design your share buttons. Then copy and paste the generated code to _layouts/post.html as suggested.
