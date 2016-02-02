@@ -1,4 +1,4 @@
-{% assign tagStr = '' %}
+g% assign tagStr = '' %}
 {% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
 
 {% for tag in page.tags %}
@@ -7,8 +7,6 @@
     {% capture tagStr %}{{ tagStr }},{{ tag }}{% endcapture %}
     {% endif %}
 {% endfor %}
-
-Share This:
 
 <div class="social-share">
     <a class="social-share-element social-twitter" href="https://twitter.com/intent/tweet?text={% if page.subtitle != null %}{{ page.subtitle }} {% endif %}{{ page.title }}&url={{ url }}&via=embolon_tweet&hashtags={{ tagStr }}" target="_blank" title="Share this post on Twitter" onclick="_gaq.push(['_trackEvent', 'Share', 'Twitter', window.location.pathname]);">Twitter</a>
