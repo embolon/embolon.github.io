@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import time
+import datetime
 import argparse
 
 parser = argparse.ArgumentParser(description='Arguments')
@@ -29,7 +30,8 @@ if __name__ == '__main__':
     post_name = today + '-' + title
 
     # prepare post content
-    now = time.strftime("%Y-%m-%d %H:%M:%S %z")
+    now = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S %z") # utc_now
+    #now = time.strftime("%Y-%m-%d %H:%M:%S %z")
     identifier = args_var['identifier']
     title = args_var['title']
     categories = '-'.join(args_var['categories'].lower().split()) # all lowercase connect with '-'
