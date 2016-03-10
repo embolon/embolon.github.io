@@ -73,3 +73,65 @@ Only create a single global variable to avoid various issues.
 
 
 Make MYAPP as a variable container.
+
+
+## Functions
+
+### Invocation Pattern
+
+**The Method**
+
+this binds to the owner object
+
+**The Function**
+
+this binds to global variable instead of the owner object which is a bad design. Do the below to avoid.
+
+
+    myObject.double = funcion () {
+        var that = this;
+        var helper = function () {
+            that.value = add(that.value, that.value); // this does not work here
+        };
+        helper();
+    };
+
+
+**The Constructor**
+
+with a new in front of the constructor, this will bind to the new object.
+
+
+    var Quo = function (string) {
+        this.status = string
+    };
+
+    var myQuo = new Quo("confused"); // do not forget "new"
+
+
+This is actually not a very good way to make a constructor.
+
+**The Apply**
+
+apply will take an owner object as parameter too.
+
+
+    var sum = add.apply(null, [3, 4]); // null will be assigned to this
+
+### Augmenting Types
+
+Add method to Function.prototype to make this method available to all functions.
+
+
+    Function.prototype.method = function (name, func) {
+        this.prototype[name] = func;
+        return this;
+    }; // this is not a function defination, so a ';' is needed
+    // Function.prototype.method = an anonymous function;
+    // this function add a method to the owner object
+
+    Number.method('interger', function () {
+        return Math[this < 0 ? 'ceiling' : 'floor'](this);
+    });
+
+    document.writeln((-10 / 3).integer()); // -3
