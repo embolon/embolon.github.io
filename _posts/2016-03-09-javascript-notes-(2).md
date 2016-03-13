@@ -160,6 +160,8 @@ A function with cache.
     var factorial = memoization([0, 1], function (shell, n) {return n*shell(n-1);});
 
 
-### Inheritance
+### Other Tips
 
 
+1. always use '===' or '!==' instead of '==' or '!='
+2. always use 'var foo = function foo () ();' instead of 'function foo () {}' in JavaScript, this clearly claims that foo is a variable, any function in JavaScript is a variable.
