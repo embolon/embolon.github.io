@@ -165,3 +165,4 @@ A function with cache.
 
 1. always use '===' or '!==' instead of '==' or '!='
 2. always use 'var foo = function foo () ();' instead of 'function foo () {}' in JavaScript, this clearly claims that foo is a variable, any function in JavaScript is a variable.
+3. be cautious when use 'for in' to check all properties of an object, since this will also include function properties (functions are variables too)
