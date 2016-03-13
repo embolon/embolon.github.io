@@ -38,7 +38,7 @@ Number, String, Bool, null and undefined are not objects. JavaScript Object are 
     fllght.equipment && flight.equipment.model // undefined
 
 
-### Reference
+#### Reference
 
 object is always refered not copied.
 
@@ -47,7 +47,7 @@ object is always refered not copied.
     var a = b = c = {};           // a, b, c all refers to the same empty object
 
 
-### Prototype
+#### Prototype
 
 
     if (typeof Object.beget !== 'function') {
@@ -60,7 +60,7 @@ object is always refered not copied.
     var another_stooge = Object.beget(stooge);  // heritage from prototype stooge
 
 
-### Global Abatement
+#### Global Abatement
 
 Only create a single global variable to avoid various issues.
 
@@ -75,9 +75,9 @@ Only create a single global variable to avoid various issues.
 Make MYAPP as a variable container.
 
 
-## Functions
+### Functions
 
-### Invocation Pattern
+#### Invocation Pattern
 
 **The Method**
 
@@ -118,7 +118,7 @@ apply will take an owner object as parameter too.
 
     var sum = add.apply(null, [3, 4]); // null will be assigned to this
 
-### Augmenting Types
+#### Augmenting Types
 
 Add method to Function.prototype to make this method available to all functions.
 
@@ -135,3 +135,31 @@ Add method to Function.prototype to make this method available to all functions.
     });
 
     document.writeln((-10 / 3).integer()); // -3
+
+#### Scope
+
+Unlike C++, variable does not only live inside the scope. Variable will live in the whole function where it is defined.
+
+#### Memoization
+
+A function with cache.
+
+
+    var memoizer = function (memo, fundamental) {
+        var shell = function (n) {
+             var result = memo[n];
+             if (typeof result !== 'number') {
+                 result = fundamental (shell, n);
+                 memo[n] = result;
+             }
+             return result;
+        };   // shell is the altimate memoizated function
+        return shell;
+    };
+
+    var factorial = memoization([0, 1], function (shell, n) {return n*shell(n-1);});
+
+
+### Inheritance
+
+
