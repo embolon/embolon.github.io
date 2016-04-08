@@ -18,13 +18,13 @@ After a few days of posting random stuff, I decided to add some new features to 
 
 ## Favicon
 
-This little thing lives in your browser tag and favorite folders. It usually is a 16x16 size png or ico image. After googling around, I found a pretty good website [post](http://www.realfavicongenerator.net "Real Favicon Generator.net"), which has detailed instructions and codes to show you how to add the favicon to your site. One thing to keep in mind is that there is a debate on whether you should put favicon.ico (together with some other files)in the site root directory. It has benefits and drawbacks.
+This little thing lives in your browser tag and favorite folders. It usually is a 16x16 size png or ico image. After googling around, I found a pretty good [website](http://www.realfavicongenerator.net "Real Favicon Generator.net"), which has detailed instructions and codes to show you how to add the favicon to your site. One thing to keep in mind is that there is a debate on whether you should put favicon.ico (together with some other files)in the site root directory. It has benefits and drawbacks.
 
 To keep things short. Prepare an image with good quality to serve as your original icon. Feed it to a favicon gen website and get a set of icons. Upload this set of icons to blog site and modify the html head accordingly.
 
 ## Footer modification
 
-I think the three column footer is really not necessary for my blog. So I modified it to look like this [post](http://http://themicronaut.github.io/ "Blog"). To add the license information is pretty straight forward, just check the [post](http://creativecommons.org/licenses/by-nc-sa/4.0/ "Creative Commons International License") for detailed instructions. The difficult part is to add social icons. In order to do so, we will have to touch CSS which is a whole new experience for me. 
+I think the three column footer is really not necessary for my blog. So I modified it to look like this [Blog](http://http://themicronaut.github.io/). To add the license information is pretty straight forward, just check the [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/4.0) for detailed instructions. The difficult part is to add social icons. In order to do so, we will have to touch CSS which is a whole new experience for me. 
 
 ### Step 0
 
