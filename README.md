@@ -2,6 +2,17 @@
 
 This is Embolon's Blog site -- Embolon Who.
 
+4/8/2016
+
+* Modified footer
+* Added favicon
+
+To dos:
+
+- [ ] Add tag and category count
+- [ ] Find a better looking font
+- [ ] Put a icon before the Blog Title 
+
 1/20/2016
 
 * Added share feature
