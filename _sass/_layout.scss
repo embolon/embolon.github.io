@@ -141,12 +141,6 @@
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
-*/
-
-.footer-center-wrapper {
-    text-align: center;
-    font-style: italic;
-}
 
 @include media-query($on-laptop) {
     .footer-col-1,
@@ -166,6 +160,23 @@
         float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+*/
+
+.footer-center-wrapper {
+    text-align: center;
+    font-style: italic;
+}
+
+.social-icons {
+    margin: 1em;
+    a {
+      text-decoration: none;  /* remove underline in social icons */
+      padding: 4px 4px;
+      &:hover {
+        color: $grey-color;
+      }
     }
 }
 
