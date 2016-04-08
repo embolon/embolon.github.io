@@ -15,11 +15,13 @@ language: english
 
 It is really nice to have some comment support for this blog, so I have googled around and added this Disqus support. Here, I documented the steps.
 
-## Step 0 Register the blog site on Disqus
+### Step 0 Register the blog site on Disqus
 
 Disqus is a pretty popular discussion and comment system online. It is pretty simple to set up for jekyll. We will first sign up an account on Disqus, and then register my blog site. The site registration requires a shortname, which does not seem to be connected with the actually site url, but I am not sure. After the registration, Disqus will lead us to a page with Universal Code, that will be used to insert in the "comment" session of our site.
 
-## Step 1 Edit the blog site
+---
+
+### Step 1 Edit the blog site
 
 We will modify _layouts/post.html to include a "comment" session and create a _includes/disqus.html that holds the actual "comment" session Universal Code.
 
@@ -81,8 +83,9 @@ The liquid template will read page front matter to parse into variables like pag
 
     ## Testing
 
+---
 
-## Optional Disqus Identifier
+### Optional Disqus Identifier
     
 Since a page url can change when we decided to change the title of the post, a Disqus Identifier is better not set to the page url. People suggested [different solutions](http://icantrap.github.io/2014/07/09/automatically-generate-disqus-identifiers-with-jekyll/ "Automatically Generate Disqus Identifiers with Jekyll") to this situation including generating random numbers to assign to the new post or maintain a counter of the number of the posts. For the former one, as long as there are no random number conflicks, that is, a new generated number does not equal to any previous post, it should be fine. This is an easy soluation but not very reliable. The latter one can avoid possible identifier conflicks but will require the counter to be stored, which will add a little complexity.
 

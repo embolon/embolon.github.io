@@ -74,6 +74,7 @@ MYAPP.variables = {
 
 Make MYAPP as a variable container.
 
+---
 
 ### Functions
 
@@ -162,8 +163,9 @@ var memoizer = function (memo, fundamental) {
 var factorial = memoization([0, 1], function (shell, n) {return n*shell(n-1);});
 {% endhighlight %}
 
-### Other Tips
+---
 
+### Other Tips
 
 1. always use '===' or '!==' instead of '==' or '!='
 2. always use 'var foo = function foo () ();' instead of 'function foo () {}' in JavaScript, this clearly claims that foo is a variable, any function in JavaScript is a variable.

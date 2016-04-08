@@ -22,6 +22,8 @@ This little thing lives in your browser tag and favorite folders. It usually is 
 
 To keep things short. Prepare an image with good quality to serve as your original icon. Feed it to a favicon gen website and get a set of icons. Upload this set of icons to blog site and modify the html head accordingly.
 
+---
+
 ## Footer modification
 
 I think the three column footer is really not necessary for my blog. So I modified it to look like this [Blog](http://themicronaut.github.io/). To add the license information is pretty straight forward, just check the [Creative Commons License](http://creativecommons.org/licenses/by-nc-sa/4.0) for detailed instructions. The difficult part is to add social icons. In order to do so, we will have to touch CSS which is a whole new experience for me. 
