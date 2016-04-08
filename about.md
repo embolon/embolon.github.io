@@ -4,6 +4,10 @@ title: About
 permalink: /about/
 ---
 
+<a href="https://en.wikipedia.org/wiki/Flying_wedge" target="_blank">
+    <img style="width:400px;height:300px;" src="/imgs/embolon.jpg" alt="An embolon on a warship">
+</a>
+
 Embolon is a battering ram on a warship or a wedge shaped military formation. This bizarre word came to me decades ago on a boring afternoon just like any other one. I was preparing for my English class finals, looking up words on my digital dictionary. Aimlessly hitting the next button on the keyboard, I was wondering, could there be something fun? Then, "embolon" popped up. It was so strange and so not English. It seems that this word could only exit in the conversation between history nerds. And the best thing is that it can easily pass all kinds of username duplication tests.
 
 {% comment %}
