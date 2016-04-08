@@ -120,6 +120,7 @@
     @extend %clearfix;
 }
 
+/*
 .footer-col {
     float: left;
     margin-bottom: $spacing-unit / 2;
@@ -140,9 +141,11 @@
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
+*/
 
 .footer-center-wrapper {
     text-align: center;
+    font-style: italic;
 }
 
 @include media-query($on-laptop) {
