@@ -21,38 +21,38 @@ I will start my JavaScript learning session today, keep notes and document inter
 
 JavaScript uses dynamic typing, that types are associated with values, not with variables. A variable can be assign a string and later change to a integer. But unlike Python, JavaScript still needs to define any new variable. 
 
-    
-    var x; // define variable x, which is initialized as "undefined"
-    var y = null; // define and initiate variable y to "null"
-    var z = "What is going on?";
-
+{% highlight javascript %}    
+var x; // define variable x, which is initialized as "undefined"
+var y = null; // define and initiate variable y to "null"
+var z = "What is going on?";
+{% endhighlight %}
 
 ### Object related
 
 JavaScript uses a prototype-based object-oriented programming. It may looks weird, but JavaScript uses prototypes while most others use classes for inheritance. Functions are used as the object constructor, rather than having a special init method or constructor functions. Object method functions are also just like other normal functions, only that method functions has a **this** keyword that is bound to a certain object domain/scope. But we can later bind a normal function with an object and use **this** keyword to refer to the object member.
 
-
-    function Person(name, age) {
-        this.name = name;
-        this.age = age;
-        
-        this.print = function() {
-            console.log(name+" is "+this.age+" years old.");
-        }
-    }
-
-    var Jack;
-    Jack = new Person("Jack", 20);
-    Jack.print();             // Print "Jack is 20 years old."
+{% highlight javascript %}
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
     
-    function printName() {
-        console.log(this.name);
+    this.print = function() {
+        console.log(name+" is "+this.age+" years old.");
     }
-    
-    var boundPrintName = printName.bind(Jack);
-    boudnPrintName();         // Print "Jack"
-    printName.call(Jack);     // Print "Jack"
+}
 
+var Jack;
+Jack = new Person("Jack", 20);
+Jack.print();             // Print "Jack is 20 years old."
+
+function printName() {
+    console.log(this.name);
+}
+
+var boundPrintName = printName.bind(Jack);
+boudnPrintName();         // Print "Jack"
+printName.call(Jack);     // Print "Jack"
+{% endhighlight %}
 
 ### Syntax
 

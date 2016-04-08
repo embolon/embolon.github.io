@@ -23,46 +23,47 @@ Disqus is a pretty popular discussion and comment system online. It is pretty si
 
 We will modify _layouts/post.html to include a "comment" session and create a _includes/disqus.html that holds the actual "comment" session Universal Code.
 
+{% highlight html %}
+_layouts/post.html
+<article>
+  ...
+  # header
+  # content
+  <div class="comments">
+    { % include disqus.html % } # NOTE, no space between { and %, % and }
+  </div>  
+</article>
 
-    _layouts/post.html
-    <article>
-      ...
-      # header
-      # content
-      <div class="comments">
-        { % include disqus.html % } # NOTE, no space between { and %, % and }
-      </div>  
-    </article>
 
+_includes/disqus.html
+{ % if page.comments % }
+<div class="comments">
+  <div id="disqus_thread"></div>
+    <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
 
-    _includes/disqus.html
-    { % if page.comments % }
-    <div class="comments">
-      <div id="disqus_thread"></div>
-        <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         */
+    var disqus_config = function () {
+        this.page.url = '{ { site.url } }{ { page.url } }';  // Replace PAGE_URL with your page's canonical URL variable
+        { % if page.disqus_identifier % }
+        this.page.identifier = '{ { page.disqus_identifier } }'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        { % endif % }
+    };
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
     
-        var disqus_config = function () {
-            this.page.url = '{ { site.url } }{ { page.url } }';  // Replace PAGE_URL with your page's canonical URL variable
-            { % if page.disqus_identifier % }
-            this.page.identifier = '{ { page.disqus_identifier } }'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            { % endif % }
-        };
-        (function() {  // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-        
-            s.src = '//SITE_SHORTNAME.disqus.com/embed.js'; // put your site-shortname that is registered on Disqus here
-        
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    </div>
-    { % endif % }
+        s.src = '//SITE_SHORTNAME.disqus.com/embed.js'; // put your site-shortname that is registered on Disqus here
+    
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+{ % endif % }
+{% endhighlight %}
 
 
 The liquid template will read page front matter to parse into variables like page.url, page.layouts, page.comments. A typical way to use the liquid template is like this: { % if page.comments % } { % endif % }. This works like the C macro #ifdef and #endif. To enable such page.comments switch, we will further include the "comments" into the post front matter.

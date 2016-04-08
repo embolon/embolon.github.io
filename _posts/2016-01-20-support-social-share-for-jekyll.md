@@ -22,9 +22,9 @@ It is very common to use shortUrl in Twitter posts due to its previous 140 chara
 
 Thanks to Wenli Zhang's [post](http://zhangwenli.com/blog/2014/08/03/make-your-own-social-sharing-bar-with-jekyll/ "Make Your Own Social Sharing Bar with Jekyll"), it is a very good guidence to setup the sharing feature. I have comment out everything related to the shortUrl. To add a new share site, check out the code below.
 
-
-     <a class="social-share-element" id="social-weibo" href="http://v.t.sina.com.cn/share/share.php?title=来看看+%40[YOUR_WEIBO_USERNAME]+的博文吧：{{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" title="Share this post on Sina Weibo">Weibo</a>
-
+{% highlight html %}
+<a class="social-share-element" id="social-weibo" href="http://v.t.sina.com.cn/share/share.php?title=来看看+%40[YOUR_WEIBO_USERNAME]+的博文吧：{{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" title="Share this post on Sina Weibo">Weibo</a>
+{% endhighlight %}
 
 Different SNS sites have very similar sharing templates. For more information, please check my site's [source code](http://github.com/embolon/embolon.github.io) (/_includes/share.html). At last, don't forget to include share.html into _layouts/post.html.
 

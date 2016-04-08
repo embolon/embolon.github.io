@@ -34,18 +34,18 @@ Find and download a set of the favorate icon images. You can choose the icon col
 
 We will have to add a new social-icon class to the css file (_sass/_layout.scss) as below.
 
-    
-    .social-icons {
-        margin: 1em;
-        a {
-          text-decoration: none; /* remove underline in social icons */
-          padding: 4px 4px;
-          &:hover {
-            color: &grey-color;
-          }
-        }
+{% highlight scss %}    
+.social-icons {
+    margin: 1em;
+    a {
+      text-decoration: none; /* remove underline in social icons */
+      padding: 4px 4px;
+      &:hover {
+        color: &grey-color;
+      }
     }
-
+}
+{% endhighlight %}
 
 I have added the text-decoration: none; to get ride of the annoying underline on the icons, but there might be a better way to do so. 
 
@@ -53,10 +53,10 @@ I have added the text-decoration: none; to get ride of the annoying underline on
 
 To add a icon, we can it like below (_includes/footer.html):
 
-
-    <div class="social-icons">
-    { % if site.owner.github % }<a href="https://github.com/{ { site.owner.github } }" title="{ { site.owner.name } } on Github" target="_black"><span class="icon32 icon--github">{ % include icon-github.svg % }</span></a>{ % endif % }
-    </div>
-
+{% highlight html %}
+<div class="social-icons">
+{ % if site.owner.github % }<a href="https://github.com/{ { site.owner.github } }" title="{ { site.owner.name } } on Github" target="_black"><span class="icon32 icon--github">{ % include icon-github.svg % }</span></a>{ % endif % }
+</div>
+{% endhighlight %}
 
 Now you can add as many social icons as you like!

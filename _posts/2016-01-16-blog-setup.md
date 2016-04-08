@@ -21,12 +21,14 @@ If you write programs, chances are, you already have an account. But no worries 
 
 Assume you already know how to create a new repository on Github. The name of a Github Blog repository is usually like USERNAME.github.io, where USERNAME is user customizable. We can add a index.html into the repository for testing. Note that a blog page should use the normal master branch, but a project page should use a special gh-pages branch instead.
 
-    git clone https://github.com/USERNAME/USERNAME.github.io
-    cd USERNAME.github.io
-    echo "Hello World!" > index.html
-    git add index.html
-    git commit -a -m "Initial commit"
-    git push -u origin master
+{% highlight bash %}
+git clone https://github.com/USERNAME/USERNAME.github.io
+cd USERNAME.github.io
+echo "Hello World!" > index.html
+git add index.html
+git commit -a -m "Initial commit"
+git push -u origin master
+{% endhighlight %}
 
 Once the repository is created, we can visit http://USERNAME.github.io to check out the new blog site. If you see a "Hello World" appear on the left cornor of the blog site, you are done!
 
@@ -40,23 +42,27 @@ This step will enable us to use jekyll to locally run and test our blog before u
 
 Since the ubuntu default ruby and jekyll packages are out-dated, I used the rvm -- Ruby Version Manager to install ruby. And using rvm can avoid issues such as requiring root privilege when installing gem tools.
 
-    # install RVM
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-    curl -L get.rvm.io | bash -s stable --auto
+{% highlight bash %}
+# install RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -L get.rvm.io | bash -s stable --auto
 
-    # install ruby
-    source ~/.rvm/scripts/rvm  # this will enable rvm and its enviroment settings
-    rvm install ruby-VERSION   # we can choose VERSION, if left none then will install the default version
+# install ruby
+source ~/.rvm/scripts/rvm  # this will enable rvm and its enviroment settings
+rvm install ruby-VERSION   # we can choose VERSION, if left none then will install the default version
 
-    # install jekyll
-    gem install jekyll
+# install jekyll
+gem install jekyll
+{% endhighlight %}
 
 My current versions:
 
-    ruby -v
-    ruby 2.2.1p85
-    jekyll -v
-    jekyll 3.0.1
+{% highlight bash %}
+ruby -v
+ruby 2.2.1p85
+jekyll -v
+jekyll 3.0.1
+{% endhighlight %}
 
 Now we have successfully installed jekyll!
 
@@ -66,18 +72,22 @@ Now we have successfully installed jekyll!
 
 Now that we have blog repository set up and jekyll installed, we can start to edit our blog site locally. Assuming our local repo at USERNAME.github.io, we can add the jekyll base theme to it. 
 
-    cd USERNAME.github.io
-    git rm index.html  # remove the previous index.html page
-    jekyll new .       # initiate jekyll theme
-    jekyll serve       # start jekyll serve
+{% highlight bash %}
+cd USERNAME.github.io
+git rm index.html  # remove the previous index.html page
+jekyll new .       # initiate jekyll theme
+jekyll serve       # start jekyll serve
+{% endhighlight %}
 
 Now we can visit localhost:4000 to check our local blog site. It should be the standard jekyll theme. We can edit _config.yml to change the blog title, email, twitter and github account information, etc. There are a lot of things we can change to make our blog better. Just google around to find new jekyll themes and follow their instructions.
 
 Once we have picked the ideal jekyll theme, it is time to bring the blog site online. One of the good thing I like Github page is that we can upload our blog site by simply pushing local repo to the remote.
 
-    git add ALL_FILES
-    git commit -a -m "SOME COMMENT"
-    git push -u origin master
+{% highlight bash %}
+git add ALL_FILES
+git commit -a -m "SOME COMMENT"
+git push -u origin master
+{% endhighlight %}
 
 It's Alive!
 
