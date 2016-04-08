@@ -15,5 +15,5 @@
     {% if site.owner.lastfm %}<a href="https://www.last.fm/user/{{ site.owner.lastfm }}/" title="{{ site.owner.name}} on Last.fm" target="_blank"><span class="icon32 icon--lastfm">{% include icon-lastfm.svg %}</span></a>{% endif %}
     {% if site.owner.soundcloud %}<a href="https://www.soundcloud.com/{{ site.owner.soundcloud }}/" title="{{ site.owner.name}} on Soundcloud" target="_blank"><span class="icon32 icon--soundcloud">{% include icon-soundcloud.svg %}</span></a>{% endif %}
 
-    <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><span class="icon32 icon--rss">{% include icon-rss.svg %}</span></a>
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Atom/RSS feed" target="_blank"><span class="icon32 icon--rss">{% include icon-rss.svg %}</span></a>
 	
