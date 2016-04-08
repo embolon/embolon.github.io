@@ -9,7 +9,8 @@ Click on a tag to see relevant list of posts.
 <ul class="tags">
 {% for tag in site.tags %}
   {% assign t = tag | first %}
-  <li><a href="/tag/#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a></li>
+  {% assign posts = tag | last %}
+  <li><a href="/tag/#{{t | downcase | replace:" ","-" }}">{{ t | downcase }}</a> has {{ posts | size }} posts</li>
 {% endfor %}
 </ul>
 

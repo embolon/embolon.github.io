@@ -9,7 +9,7 @@ This is Embolon's Blog site -- Embolon Who.
 
 To dos:
 
-- [ ] Add tag and category count
+- [x] Add tag and category count
 - [ ] Find a better looking font
 - [ ] Put a icon before the Blog Title 
 

@@ -9,7 +9,8 @@ Click on a category to see relevent posts.
 <ul class="categories">
 {% for category in site.categories %}
   {% assign c = category | first %}
-  <li><a href="/categories/#{{c | downcase | replace:" ","-" }}">{{ c | downcase }}</a></li>
+  {% assign posts = category | last %}
+  <li><a href="/categories/#{{c | downcase | replace:" ","-" }}">{{ c | downcase }}</a> has {{ posts | size }} posts</li>
 {% endfor %}
 </ul>
 
