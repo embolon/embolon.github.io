@@ -6,6 +6,8 @@ This is Embolon's Blog site -- Embolon Who.
 
 * Modified footer
 * Added favicon
+* Added page navigation, Note: Jiathis inline issue
+* Added tag and category count
 
 To dos:
 

@@ -258,3 +258,18 @@
         }
     }
 }
+
+.page-navigation {
+    font-size: 14px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+    a {
+      width: 50%;
+      float: left;
+      margin: 1em 0;
+    }
+    .next-page {
+      text-align: right;
+    }
+}

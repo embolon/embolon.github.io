@@ -15,6 +15,19 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="page-navigation">
+    {% if page.previous.url %}
+      <a class="prev-page" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+    {% else %}
+      <a class="prev-page"></a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next-page" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+    {% else %}
+      <a class="next-page"></a>
+    {% endif %}
+  </div>
+
   <div class="social-share">
     {% if page.language == 'english' %}{% include addthis_activate.html %}{% endif %}
     {% if page.language == 'chinese' %}{% include jiathis.html %}{% endif %}
